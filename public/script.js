@@ -8,6 +8,8 @@ window.addEventListener("keyup", function(event) {
         back();
 })
 
+let textview = document.getElementById("textview");
+
 function evil(exp) { /* caqlc func  (eval alternative) */
     return new Function('return ' + exp)();
 }

@@ -1,12 +1,7 @@
-<html>
-    <head>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header id="header"></header>
+<%- include ("partials/head") -%>
+
         <div class="main">
-                <input id="textview" class="textview" name="textview">
+                <input id="textview" class="textview" name="textview" readonly>
             <table>
                 <tr>
                     <td><input class="button" type="button" value="C" onclick="clean()"></td>
@@ -38,7 +33,5 @@
                 </tr>
             </table>
         </div>
-        <footer><p class="footer-text"><a href="https://github.com/ablin42">@ablin42</a></p></footer>
-    </body>
-    <script src="script.js"></script>
-</html>
+
+<%- include ("partials/footer") -%>
