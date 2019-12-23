@@ -90,7 +90,6 @@ const deleteButton = document.querySelector('[data-delete]');
 const allClearButton = document.querySelector('[data-all-clear]');
 const previousOperandText = document.querySelector('[data-previous]');
 const currentOperandText = document.querySelector('[data-current]');
-
 const calculator = new Calculator(previousOperandText, currentOperandText);
 
 numberButtons.forEach(button => {

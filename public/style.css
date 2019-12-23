@@ -1,10 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
+* {margin: 0; padding: 0;}
+body {
+    background: linear-gradient(45deg, rgba(17, 21, 79, 0.8) 0%, rgba(17, 21, 79, 0.8) 12.5%,rgba(27, 87, 118, 0.8) 12.5%, rgba(27, 87, 118, 0.8) 25%,rgba(32, 120, 137, 0.8) 25%, rgba(32, 120, 137, 0.8) 37.5%,rgba(36, 154, 156, 0.8) 37.5%, rgba(36, 154, 156, 0.8) 50%,rgba(46, 220, 195, 0.8) 50%, rgba(46, 220, 195, 0.8) 62.5%,rgba(22, 54, 98, 0.8) 62.5%, rgba(22, 54, 98, 0.8) 75%,rgba(41, 187, 175, 0.8) 75%, rgba(41, 187, 175, 0.8) 87.5%,rgba(51, 253, 214, 0.8) 87.5%, rgba(51, 253, 214, 0.8) 100%),linear-gradient(0deg, rgb(92, 231, 151),rgb(43, 141, 123));
+    font-family: 'Open Sans', sans-serif;
 }
 
-body {background: linear-gradient(45deg, rgba(17, 21, 79, 0.8) 0%, rgba(17, 21, 79, 0.8) 12.5%,rgba(27, 87, 118, 0.8) 12.5%, rgba(27, 87, 118, 0.8) 25%,rgba(32, 120, 137, 0.8) 25%, rgba(32, 120, 137, 0.8) 37.5%,rgba(36, 154, 156, 0.8) 37.5%, rgba(36, 154, 156, 0.8) 50%,rgba(46, 220, 195, 0.8) 50%, rgba(46, 220, 195, 0.8) 62.5%,rgba(22, 54, 98, 0.8) 62.5%, rgba(22, 54, 98, 0.8) 75%,rgba(41, 187, 175, 0.8) 75%, rgba(41, 187, 175, 0.8) 87.5%,rgba(51, 253, 214, 0.8) 87.5%, rgba(51, 253, 214, 0.8) 100%),linear-gradient(0deg, rgb(92, 231, 151),rgb(43, 141, 123))}
-
+/* ALERTS */
 .alert {
     position: relative;
     padding: .75rem 1.25rem;
@@ -30,6 +30,7 @@ body {background: linear-gradient(45deg, rgba(17, 21, 79, 0.8) 0%, rgba(17, 21, 
     border: 0px;
 }
 
+/* MAIN CONTAINER */
 .main {
     position: absolute;
     top: 50%;
@@ -41,22 +42,7 @@ body {background: linear-gradient(45deg, rgba(17, 21, 79, 0.8) 0%, rgba(17, 21, 
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.51);
 }
 
-button {
-    background: #BBDEF0;
-    border: none;
-    margin: 2;
-    cursor: pointer;
-    font: 600 2em Arial!important;
-    transition: ease-in-out 0.2s;
-}
-
-button:hover {background-color: #3D5A6C;}
-
-.clicked {
-    background-color: #78FFD6!important;
-    transition: ease-in-out 0.2s
-}
-
+/* CALCULATOR */
 .calculator-grid {
     display: grid;
     justify-content: center;
@@ -88,18 +74,30 @@ button:hover {background-color: #3D5A6C;}
 }
 
 .calculator-grid > button {
-  
+    background: #BBDEF0;
+    border: none;
+    margin: 2;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif!important;
+    font-size: 2em;
+    font-weight: 600;
+    transition: ease-in-out 0.2s;
 }
 
-
 .calculator-grid > button:hover {
+    background-color: #3D5A6C;
+}
 
+.clicked {
+    background-color: #78FFD6!important;
+    transition: ease-in-out 0.2s
 }
 
 .span-two {
     grid-column: span 2;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     position: fixed;
