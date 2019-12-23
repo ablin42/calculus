@@ -122,33 +122,22 @@ deleteButton.addEventListener('click', button => {
     calculator.updateDisplay();
 })
 
-
 window.addEventListener("keyup", function(event) {
     let keyPressed = event.keyCode;
     let key = event.key;
 
-    if ((keyPressed >= 96 && keyPressed <= 105) || keyPressed === 110) {
-        calculator.appendNumber(key);
-        calculator.updateDisplay();
-    }
-    if (keyPressed === 106 || keyPressed === 107 || keyPressed === 109 || keyPressed === 111) {
-        if (keyPressed === 111)
-            key = "÷";
-        calculator.chooseOperation(key);
-        calculator.updateDisplay();
-    }
-    if (keyPressed === 46) {
-        calculator.clear();
-        calculator.updateDisplay();
-    }
-    if (keyPressed === 13) {
-        calculator.compute();
-        calculator.updateDisplay();
-    }
-    if (keyPressed === 8 || keyPressed === 187) {
-        calculator.delete();
-        calculator.updateDisplay(); 
-    }
+    if (keyPressed >= 96 && keyPressed <= 105) 
+        $(`#NB-${key}`).click();
+    if (keyPressed === 110)
+        $('#DOT').click();
+    if (keyPressed === 106 || keyPressed === 107 || keyPressed === 109 || keyPressed === 111)
+        $(`#OP-${keyPressed}`).click();
+    if (keyPressed === 46) 
+       $("#AC").click();
+    if (keyPressed === 13 || keyPressed === 187) 
+        $("#equals").click();
+    if (keyPressed === 8)
+        $("#DEL").click();
 })
 
 $('button').on('click', function() {
