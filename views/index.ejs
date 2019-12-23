@@ -1,37 +1,30 @@
 <%- include ("partials/head") -%>
 
-        <div class="main">
-                <input id="textview" class="textview" name="textview" readonly>
-            <table>
-                <tr>
-                    <td><input class="button" type="button" value="C" onclick="clean()"></td>
-                    <td><input class="button" type="button" value="<" onclick="back()"></td>
-                    <td><input class="button" type="button" value="/" onclick="insert('/')"></td>
-                    <td><input class="button" type="button" value="X" onclick="insert('*')"></td>
-                </tr>
-                <tr>
-                    <td><input class="button" type="button" value="7" onclick="insert(7)"></td>
-                    <td><input class="button" type="button" value="8" onclick="insert(8)"></td>
-                    <td><input class="button" type="button" value="9" onclick="insert(9)"></td>
-                    <td><input class="button" type="button" value="-" onclick="insert('-')"></td>
-                </tr>
-                <tr>
-                    <td><input class="button" type="button" value="4" onclick="insert(4)"></td>
-                    <td><input class="button" type="button" value="5" onclick="insert(5)"></td>
-                    <td><input class="button" type="button" value="6" onclick="insert(6)"></td>
-                    <td><input class="button" type="button" value="+" onclick="insert('+')"></td>
-                </tr>
-                <tr>
-                    <td><input class="button" type="button" value="1" onclick="insert(1)"></td>
-                    <td><input class="button" type="button" value="2" onclick="insert(2)"></td>
-                    <td><input class="button" type="button" value="3" onclick="insert(3)"></td>
-                    <td rowspan=5><input class="button" style="height:106" type="button" value="=" onclick="equal()"></td>
-                </tr>
-                <tr>
-                    <td colspan=2><input class="button" style="width:106" type="button" value="0" onclick="insert(0)"></td>
-                    <td><input class="button" type="button" value="." onclick="insert('.')"></td>
-                </tr>
-            </table>
+<div class="main">
+    <div class="calculator-grid">
+        <div class="output">
+            <div data-previous class="previous-operand"></div>
+            <div data-current class="current-operand"></div>
         </div>
-
+        <button data-all-clear class="span-two">AC</button>
+        <button data-delete>DEL</button>
+        <button data-operation>÷</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>*</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>+</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <button data-equals class="span-two">=</button>
+    </div>
+</div>
+      
 <%- include ("partials/footer") -%>

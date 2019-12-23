@@ -35,15 +35,6 @@ body {background: linear-gradient(45deg, rgba(17, 21, 79, 0.8) 0%, rgba(17, 21, 
     transition: ease-in-out 0.2s
 }
 
-.textview {
-    width: 217;
-    margin: 5;
-    font-size: 25;
-    padding: 5;
-    border: none;
-    color: #054A91;
-}
-
 .alert {
     position: relative;
     padding: .75rem 1.25rem;
@@ -85,4 +76,47 @@ footer {
 .footer-text a {
     color: #f8c291;
     text-decoration: none;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5em;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5em;
+}
+
+.calculator-grid > button {
+  
+}
+
+
+.calculator-grid > button:hover {
+
+}
+
+.span-two {
+    grid-column: span 2;
 }
